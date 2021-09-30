@@ -1,4 +1,6 @@
-export function Section(title, children, className) {
+import PropsType from 'prop-types';
+
+export function Section({ title, children, className }) {
     return (
         <div>
             <h2>{title}</h2>
@@ -7,4 +9,9 @@ export function Section(title, children, className) {
             </section>
         </div>
     );
+}
+
+Section.PropsType = {
+    title: PropsType.string,
+    className: PropsType.string
 }
