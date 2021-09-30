@@ -1,7 +1,8 @@
 import './App.css';
 import { Component } from 'react';
 import { Section } from 'components/Section/Section';
-import { Statistics } from 'components/Statistics/Statistics';
+import Statistics from 'components/Statistics/Statistics';
+import FeedbackOptions from 'components/FeedbackOptions/FeedbackOptions';
 
 export default class App extends Component {
   state = {
@@ -10,12 +11,35 @@ export default class App extends Component {
     bad: 0
   };
 
+  handleFeedback = event => {
+    const { name } = event.currentTarget;
+
+    // const validFeedbackTypes = Object.keys(this.state).filter(
+    //   key => name === key,
+    // );
+    // if (!validFeedbackTypes.length) return;
+
+    this.setState(prevState => {
+      return {
+        ...prevState,
+        [name]: prevState[name] + 1,
+      };
+    });
+  };
+
   render() {
     return (
       <div>
-        <Section title="Please, leave feedback" className="feedback" />
-        <Statistics />
+        <Section
+          title="Please, leave feedback"
+          className="feedback" />
+        <FeedbackOptions
+          options={Object.keys(this.state)}
+          onLeaveFeedback={this.handleFeedback} />
+        <Statistics
+          state={this.state} />
       </div>
     )
   }
 }
+
