@@ -14,11 +14,6 @@ export default class App extends Component {
   handleFeedback = event => {
     const { name } = event.currentTarget;
 
-    // const validFeedbackTypes = Object.keys(this.state).filter(
-    //   key => name === key,
-    // );
-    // if (!validFeedbackTypes.length) return;
-
     this.setState(prevState => {
       return {
         ...prevState,
