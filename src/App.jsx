@@ -16,8 +16,7 @@ export default class App extends Component {
 
     this.setState(prevState => {
       return {
-        ...prevState,
-        [name]: prevState[name] + 1,
+        prevState, [name]: prevState[name] + 1,
       };
     });
   };
@@ -31,8 +30,7 @@ export default class App extends Component {
         <FeedbackOptions
           options={Object.keys(this.state)}
           onLeaveFeedback={this.handleFeedback} />
-        <Statistics
-          state={this.state} />
+        <Statistics state={this.state} />
       </div>
     )
   }
