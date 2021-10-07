@@ -21,22 +21,17 @@ class Statistics extends Component {
         
         return (
             totalFeedbacks === 0
-                ? (
-                    <Section title="Statistics" className="statistics">
-                        <div>No feedback given</div>
-                    </Section>
-                )
-            : (
-                <Section title="Statistics" className="statistics">
-                    <div>Good: { good } </div>
-                    <div>Neutral: { neutral }</div>
-                    <div>Bad: { bad }</div>
-                    <div>Total: { totalFeedbacks }</div>
-                    <div>Positive feedback: { this.countPositiveFeedbackPercent() } %</div>
-                </Section>
-            )
-        )
+                ? ( <Section title="Statistics" className="statistics">
+                    <div>No feedback given</div>
+                </Section> )
+                : ( <Section title="Statistics" className="statistics">
+                    <div>Good: {good} </div>
+                    <div>Neutral: {neutral}</div>
+                    <div>Bad: {bad}</div>
+                    <div>Total: {totalFeedbacks}</div>
+                    <div>Positive feedback: {this.countPositiveFeedbackPercent()} %</div>
+                </Section> ) )
     }
-};
+}
 
 export default Statistics;
