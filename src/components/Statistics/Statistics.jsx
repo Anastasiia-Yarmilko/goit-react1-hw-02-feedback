@@ -11,26 +11,27 @@ class Statistics extends Component {
 
     countPositiveFeedbackPercent = () => {
         return (
-            Math.round(this.props.state.good / this.countTotalFeedbacks() * 100)
+            Math.round( this.props.state.good / this.countTotalFeedbacks() * 100 )
         )
     }
 
     render() {
         const totalFeedbacks = this.countTotalFeedbacks();
         const { good, neutral, bad } = this.props.state;
-        
+
         return (
             totalFeedbacks === 0
-                ? ( <Section title="Statistics" className="statistics">
+            ? (<Section title="Statistics" className="statistics">
                     <div>No feedback given</div>
                 </Section> )
-                : ( <Section title="Statistics" className="statistics">
+            : (<Section title="Statistics" className="statistics">
                     <div>Good: {good} </div>
                     <div>Neutral: {neutral}</div>
                     <div>Bad: {bad}</div>
                     <div>Total: {totalFeedbacks}</div>
                     <div>Positive feedback: {this.countPositiveFeedbackPercent()} %</div>
-                </Section> ) )
+                </Section>)
+        )
     }
 }
 
