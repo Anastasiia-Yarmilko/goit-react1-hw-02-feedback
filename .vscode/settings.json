@@ -10,5 +10,6 @@
     "html.format.indentHandlebars": true,
     "html.format.endWithNewline": true,
     "html.format.indentInnerHtml": true,
-    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": true
+    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": true,
+    "typescript.format.placeOpenBraceOnNewLineForControlBlocks": true
 }
