@@ -8,7 +8,7 @@ export default class App extends Component {
   state = {
     good: 0,
     neutral: 0,
-    bad: 0
+    bad: 0,
   };
 
   handleFeedback = event => {
@@ -16,7 +16,8 @@ export default class App extends Component {
 
     this.setState(prevState => {
       return {
-        prevState, [name]: prevState[name] + 1,
+        prevState,
+        [name]: prevState[name] + 1,
       };
     });
   };
@@ -24,15 +25,10 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <Section
-          title="Please, leave feedback"
-          className="feedback" />
-        <FeedbackOptions
-          options={Object.keys(this.state)}
-          onLeaveFeedback={this.handleFeedback} />
+        <Section title="Please, leave feedback" className="feedback" />
+        <FeedbackOptions options={Object.keys(this.state)} onLeaveFeedback={this.handleFeedback} />
         <Statistics state={this.state} />
       </div>
-    )
+    );
   }
 }
-

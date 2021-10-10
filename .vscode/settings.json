@@ -1,5 +1,6 @@
 {
     "editor.formatOnSave": true,
+    "files.autoSave": "onFocusChange",
     "typescript.format.insertSpaceAfterTypeAssertion": true,
     "editor.formatOnType": true,
     "javascript.format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": true,
@@ -7,5 +8,10 @@
     "html.format.indentHandlebars": true,
     "html.format.endWithNewline": true,
     "html.format.indentInnerHtml": true,
-    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": true
+    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "editor.wordWrap": "on",
+    "html.format.wrapAttributes": "aligned-multiple"
 }
