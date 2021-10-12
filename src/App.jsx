@@ -16,7 +16,6 @@ export default class App extends Component {
 
     this.setState(prevState => {
       return {
-        prevState,
         [name]: prevState[name] + 1,
       };
     });
