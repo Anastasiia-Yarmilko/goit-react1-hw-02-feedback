@@ -3,8 +3,7 @@ import { Section } from 'components/Section/Section';
 
 class Statistics extends Component {
   countTotalFeedbacks = () => {
-    let total = 0;
-    return (total += this.props.state.good + this.props.state.neutral + this.props.state.bad);
+    return this.props.state.good + this.props.state.neutral + this.props.state.bad;
   };
 
   countPositiveFeedbackPercent = () => {
